@@ -1,0 +1,52 @@
+{
+  "name": "astar-demo",
+  "version": "1.0.0",
+  "author": "Austin Zhu",
+  "license": "MIT",
+  "scripts": {
+    "node": "swanky node start",
+    "lint": "eslint --ext .ts,.js .",
+    "deploy": "swanky contract deploy",
+    "compile": "swanky contract compile -v",
+    "typegen": "typechain-polkadot --in artifacts --out typechain-generated",
+    "test": "mocha -r ts-node/register \"test/**/*.test.ts\" --exit --timeout 20000"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@727-ventures/typechain-compiler": "0.5.15",
+    "@727-ventures/typechain-types": "0.0.22"
+  },
+  "devDependencies": {
+    "@727-ventures/typechain-polkadot": "0.6.10",
+    "@astar-network/swanky-cli": "1.0.11",
+    "@types/chai": "4.3.4",
+    "@types/chai-as-promised": "7.1.5",
+    "@types/mocha": "10.0.1",
+    "@typescript-eslint/eslint-plugin": "5.53.0",
+    "chai": "4.3.7",
+    "chai-as-promised": "7.1.1",
+    "eslint": "8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "34.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-n": "15.6.1",
+    "eslint-plugin-promise": "6.1.1",
+    "mocha": "10.2.0",
+    "mochawesome": "7.1.3",
+    "prettier": "2.8.4",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.5"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@astar-network/swanky-core@1.0.11": "patches/@astar-network__swanky-core@1.0.11.patch"
+    },
+    "overrides": {
+      "@polkadot/util": "10.4.2",
+      "@polkadot/util-crypto": "10.4.2",
+      "@polkadot/keyring": "10.4.2"
+    }
+  }
+}

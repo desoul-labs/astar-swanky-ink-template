@@ -1,0 +1,13 @@
+diff --git a/dist/lib/command-utils.js b/dist/lib/command-utils.js
+index bfa4c9e64fce9a1622c16ff9d559f2a6b7e1ef24..d34950a1bfcc5118baa109d50099d00f01e6b821 100644
+--- a/dist/lib/command-utils.js
++++ b/dist/lib/command-utils.js
+@@ -72,7 +72,7 @@ async function generateTypesFor(language, contractName, contractPath) {
+     if (language === "ink") {
+         await Promise.all([
+             fs.copyFile(path.resolve(contractPath, "target", "ink", `${contractName}.contract`), path.resolve(consts_js_1.ARTIFACTS_PATH, `${contractName}.contract`)),
+-            fs.copyFile(path.resolve(contractPath, "target", "ink", "metadata.json"), path.resolve(consts_js_1.ARTIFACTS_PATH, `${contractName}.json`))
++            fs.copyFile(path.resolve(contractPath, "target", "ink", `${contractName}.json`), path.resolve(consts_js_1.ARTIFACTS_PATH, `${contractName}.json`))
+         ]);
+     }
+     else if (language === "ask") {
