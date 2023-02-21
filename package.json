@@ -15,7 +15,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@727-ventures/typechain-compiler": "0.5.15",
+    "@727-ventures/typechain-compiler": "0.5.16",
     "@727-ventures/typechain-types": "0.0.22"
   },
   "devDependencies": {
