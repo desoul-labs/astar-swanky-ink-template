@@ -11,7 +11,7 @@ patchedDependencies:
     path: patches/@astar-network__swanky-core@1.0.11.patch
 
 specifiers:
-  '@727-ventures/typechain-compiler': 0.5.16
+  '@727-ventures/typechain-compiler': 0.5.17
   '@727-ventures/typechain-polkadot': 0.6.10
   '@727-ventures/typechain-types': 0.0.23
   '@astar-network/swanky-cli': 1.0.11
@@ -34,7 +34,7 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  '@727-ventures/typechain-compiler': 0.5.16_sxaswvclnxdpih7ckvc53o3gg4
+  '@727-ventures/typechain-compiler': 0.5.17_sxaswvclnxdpih7ckvc53o3gg4
   '@727-ventures/typechain-types': 0.0.23
 
 devDependencies:
@@ -60,8 +60,8 @@ devDependencies:
 
 packages:
 
-  /@727-ventures/typechain-compiler/0.5.16_sxaswvclnxdpih7ckvc53o3gg4:
-    resolution: {integrity: sha512-usrsf3zS/NpPilbIqiqDVnj+WjkeSnAdXA+XSAwjL+sxsz+Xqbydf0edEFn1zHN2D3g+PaRIbW5c+iyFHh2vcQ==}
+  /@727-ventures/typechain-compiler/0.5.17_sxaswvclnxdpih7ckvc53o3gg4:
+    resolution: {integrity: sha512-XUqQ5kD8OkL5PYMnwyD4N5v6VqdWq1wtKcHBb8AGlny06OiqG1XpLmzIlGw0oHeWiQz3fAlsAzn16CnF5R5VjA==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     hasBin: true
     dependencies:
