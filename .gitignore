@@ -232,5 +232,6 @@ oclif.manifest.json
 # tmp artifacts path
 tmpArtifacts
 
-artifacts
+artifacts/*
+!artifacts/.gitkeep
 typedContract

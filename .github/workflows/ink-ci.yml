@@ -1,0 +1,124 @@
+name: Ink! CI
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "**.rs"
+      - "**.toml"
+      - "**.ts"
+      - "**.js"
+      - ".github/workflows/ink-ci.yml"
+      - "**.json"
+      - "**.yaml"
+      - "**.patch"
+
+  pull_request:
+    branches:
+      - "**"
+    paths:
+      - "**.rs"
+      - "**.toml"
+      - "**.ts"
+      - "**.js"
+      - ".github/workflows/ink-ci.yml"
+      - "**.json"
+      - "**.yaml"
+      - "**.patch"
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          components: rustfmt
+
+      - name: Rustfmt
+        uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: --all -- --check
+  
+  compile:
+    runs-on: ubuntu-latest
+    needs: [lint]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          components: rustfmt
+
+      - name: Install binaryen
+        run: |
+          apt-get update
+          apt-get install -y binaryen
+      
+      - name: Install dylint
+        uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: dylint dylint-link
+      
+      - name: Install contract
+        uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: cargo-contract --force --locked
+      
+      - name: Build
+        run: pnpm compile psp34
+      
+  test:
+    runs-on: ubuntu-latest
+    needs: [compile]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly
+          override: true
+          components: rustfmt
+
+      - name: Install binaryen
+        run: |
+          apt-get update
+          apt-get install -y binaryen
+      
+      - name: Install dylint
+        uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: dylint dylint-link
+      
+      - name: Install contract
+        uses: actions-rs/cargo@v1
+        with:
+          command: install
+          args: cargo-contract --force --locked
+      
+      - name: Compile & Copy
+        run: |
+          pnpm compile psp34
+          find ./artifacts/ -type f -name "psp34.*" -exec cp {} ./artifacts/ \;
+      
+      - name: Test
+        run: |
+          pnpm node > node.log 2>&1 &
+          pnpm test psp34
