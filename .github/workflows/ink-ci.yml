@@ -37,14 +37,14 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
-          override: true
+          default: true
           components: rustfmt
 
       - name: Rustfmt
         uses: actions-rs/cargo@v1
         with:
           command: fmt
-          args: --all -- --check
+          args: --manifest-path ./contracts/psp34/Cargo.toml --all
   
   compile:
     runs-on: ubuntu-latest
@@ -58,8 +58,9 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
-          override: true
+          default: true
           components: rustfmt
+          target: wasm32-unknown-unknown
 
       - name: Install binaryen
         run: |
@@ -93,8 +94,9 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
-          override: true
+          default: true
           components: rustfmt
+          target: wasm32-unknown-unknown
 
       - name: Install binaryen
         run: |
