@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@727-ventures/typechain-polkadot": "0.6.10",
-    "@astar-network/swanky-cli": "1.0.11",
+    "@astar-network/swanky-cli": "2.0.0",
     "@types/chai": "4.3.4",
     "@types/chai-as-promised": "7.1.5",
     "@types/mocha": "10.0.1",
@@ -28,7 +28,7 @@
     "chai": "4.3.7",
     "chai-as-promised": "7.1.1",
     "eslint": "8.35.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-config-standard-with-typescript": "34.0.0",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-n": "15.6.1",
@@ -40,9 +40,6 @@
     "typescript": "4.9.5"
   },
   "pnpm": {
-    "patchedDependencies": {
-      "@astar-network/swanky-core@1.0.11": "patches/@astar-network__swanky-core@1.0.11.patch"
-    },
     "overrides": {
       "@polkadot/util": "10.4.2",
       "@polkadot/util-crypto": "10.4.2",
