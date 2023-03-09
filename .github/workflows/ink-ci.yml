@@ -79,6 +79,20 @@ jobs:
           command: install
           args: cargo-contract --force --locked
       
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
       - name: Build
         run: pnpm compile psp34
       
@@ -114,6 +128,20 @@ jobs:
         with:
           command: install
           args: cargo-contract --force --locked
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
       
       - name: Compile & Copy
         run: |
