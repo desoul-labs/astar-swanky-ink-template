@@ -58,7 +58,7 @@ jobs:
         with:
           toolchain: nightly
           default: true
-          components: rustfmt
+          components: rust-src
           target: wasm32-unknown-unknown
 
       - name: Install binaryen
@@ -108,19 +108,19 @@ jobs:
         with:
           toolchain: nightly
           default: true
-          components: rustfmt
+          components: rust-src
           target: wasm32-unknown-unknown
 
       - name: Install binaryen
         run: |
-          apt-get update
-          apt-get install -y binaryen
+          sudo apt-get update
+          sudo apt-get install -y binaryen
       
       - name: Install dylint
         uses: actions-rs/cargo@v1
         with:
           command: install
-          args: dylint dylint-link
+          args: cargo-dylint dylint-link
       
       - name: Install contract
         uses: actions-rs/cargo@v1
