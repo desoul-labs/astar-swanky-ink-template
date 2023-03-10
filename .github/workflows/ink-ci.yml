@@ -147,7 +147,9 @@ jobs:
           pnpm compile psp34
           find ./artifacts/ -type f -name "psp34.*" -exec cp {} ./artifacts/ \;
       
+      - name: Start node
+        run: pnpm node > node.log 2>&1 &
+      
       - name: Test
         run: |
-          pnpm node > node.log 2>&1 &
           pnpm test psp34
