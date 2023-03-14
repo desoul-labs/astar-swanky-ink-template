@@ -9,7 +9,7 @@ specifiers:
   '@727-ventures/typechain-compiler': 0.5.17
   '@727-ventures/typechain-polkadot': 0.6.10
   '@727-ventures/typechain-types': 0.0.23
-  '@astar-network/swanky-cli': 2.0.0
+  '@astar-network/swanky-cli': 2.1.0
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
   '@types/mocha': 10.0.1
@@ -34,7 +34,7 @@ dependencies:
 
 devDependencies:
   '@727-ventures/typechain-polkadot': 0.6.10_hrj2sufdvstjot27h3kha2h3l4
-  '@astar-network/swanky-cli': 2.0.0
+  '@astar-network/swanky-cli': 2.1.0
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
   '@types/mocha': 10.0.1
@@ -140,8 +140,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@astar-network/swanky-cli/2.0.0:
-    resolution: {integrity: sha512-TP7y24Jb/miVAwP6/P7PurZlkpuh0A7LD7Fcurscz8kkh1xKXz/d2s2yIE0RWIDoq/0O0GR99FmglQ+yeTI7ww==}
+  /@astar-network/swanky-cli/2.1.0:
+    resolution: {integrity: sha512-gHDgyRxCcRVzL6PhUps2hmJrd0rmF3k0Jq8RhcR3uY5VkHa4gIQ7wixQZIrj+uihbRFolDicY4jv6Ddqr++nyw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
