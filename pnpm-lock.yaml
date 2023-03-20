@@ -8,7 +8,7 @@ overrides:
 specifiers:
   '@727-ventures/typechain-compiler': 0.5.18
   '@727-ventures/typechain-polkadot': 0.6.11
-  '@727-ventures/typechain-types': 0.0.23
+  '@727-ventures/typechain-types': 0.0.24
   '@astar-network/swanky-cli': 2.1.0
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
@@ -30,7 +30,7 @@ specifiers:
 
 dependencies:
   '@727-ventures/typechain-compiler': 0.5.18_sxaswvclnxdpih7ckvc53o3gg4
-  '@727-ventures/typechain-types': 0.0.23
+  '@727-ventures/typechain-types': 0.0.24
 
 devDependencies:
   '@727-ventures/typechain-polkadot': 0.6.11_hrj2sufdvstjot27h3kha2h3l4
@@ -125,8 +125,8 @@ packages:
       - typescript
       - utf-8-validate
 
-  /@727-ventures/typechain-types/0.0.23:
-    resolution: {integrity: sha512-DNHZFFBaqENS/s8vpY5UNVs/Hqoip+56Auc/PP+vaYV708gTOovTukh2jIzIEUpcxs7t0SvOn3UBZWHT/mRNKQ==}
+  /@727-ventures/typechain-types/0.0.24:
+    resolution: {integrity: sha512-3w48HgBWtj/mOs9a6BWegkdtHERBfAQNYD7K1Sk64Mexi4pRFqu1cLXM+jwTIWsgnE9zBsRMLb6HpAr9NzK7iA==}
     dependencies:
       '@polkadot/api': 9.14.2
       '@polkadot/api-contract': 9.14.2
