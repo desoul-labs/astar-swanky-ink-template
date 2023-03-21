@@ -6,7 +6,7 @@ overrides:
   '@polkadot/keyring': 10.4.2
 
 specifiers:
-  '@727-ventures/typechain-compiler': 0.5.18
+  '@727-ventures/typechain-compiler': 0.5.19
   '@727-ventures/typechain-polkadot': 0.6.11
   '@727-ventures/typechain-types': 0.0.23
   '@astar-network/swanky-cli': 2.1.0
@@ -29,7 +29,7 @@ specifiers:
   typescript: 4.9.5
 
 dependencies:
-  '@727-ventures/typechain-compiler': 0.5.18_sxaswvclnxdpih7ckvc53o3gg4
+  '@727-ventures/typechain-compiler': 0.5.19_sxaswvclnxdpih7ckvc53o3gg4
   '@727-ventures/typechain-types': 0.0.23
 
 devDependencies:
@@ -55,12 +55,12 @@ devDependencies:
 
 packages:
 
-  /@727-ventures/typechain-compiler/0.5.18_sxaswvclnxdpih7ckvc53o3gg4:
-    resolution: {integrity: sha512-sPj1TZnoQZYkIRiEduGnsstjeXUkGmRPjgR4QYy3B3/a5EEq+i2+nEUXmrOxocpXjA9+qG5IV/HJ7LkM1sAObg==}
+  /@727-ventures/typechain-compiler/0.5.19_sxaswvclnxdpih7ckvc53o3gg4:
+    resolution: {integrity: sha512-NRGulWfHt4+NOMN41GXCc0vtdaCxy33DVVVpaqMfMDYoAbQB28wt91wR4hdIbFxmA7y+3+SG8sktDiRdX3lR4A==}
     engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     hasBin: true
     dependencies:
-      '@727-ventures/typechain-polkadot': 0.6.11_hrj2sufdvstjot27h3kha2h3l4
+      '@727-ventures/typechain-polkadot': 0.6.12_hrj2sufdvstjot27h3kha2h3l4
       '@types/consola': 2.2.5
       '@types/yargs': 17.0.22
       chalk: 4.1.2
@@ -124,6 +124,37 @@ packages:
       - supports-color
       - typescript
       - utf-8-validate
+    dev: true
+
+  /@727-ventures/typechain-polkadot/0.6.12_hrj2sufdvstjot27h3kha2h3l4:
+    resolution: {integrity: sha512-QgGCiNClWYIosvoE1sdMsqQg/N9tK9XvDacTHD2NBSiheLqA1qTRZWOu8+nJq8EZtqfBF7hHfPrwwOeMWVN8Dg==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+    hasBin: true
+    dependencies:
+      '@727-ventures/typechain-polkadot-parser': 0.3.6
+      '@polkadot/api': 9.14.2
+      '@polkadot/api-contract': 9.14.2
+      '@polkadot/keyring': 10.4.2_bfy7tld2q6wbfixybv6w75yda4
+      '@types/fs-extra': 9.0.13
+      '@types/node': 18.14.0
+      '@types/yargs': 17.0.22
+      camelcase: 6.3.0
+      eslint: 8.36.0
+      fs-extra: 9.1.0
+      handlebars: 4.7.7
+      prettier: 2.8.4
+      ts-node: 10.9.1_tncu2ai53lzgmizdedur7lbibe
+      yargs: 17.7.0
+    transitivePeerDependencies:
+      - '@polkadot/util'
+      - '@polkadot/util-crypto'
+      - '@swc/core'
+      - '@swc/wasm'
+      - bufferutil
+      - supports-color
+      - typescript
+      - utf-8-validate
+    dev: false
 
   /@727-ventures/typechain-types/0.0.23:
     resolution: {integrity: sha512-DNHZFFBaqENS/s8vpY5UNVs/Hqoip+56Auc/PP+vaYV708gTOovTukh2jIzIEUpcxs7t0SvOn3UBZWHT/mRNKQ==}
