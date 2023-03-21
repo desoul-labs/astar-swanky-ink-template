@@ -7,7 +7,7 @@ overrides:
 
 specifiers:
   '@727-ventures/typechain-compiler': 0.5.18
-  '@727-ventures/typechain-polkadot': 0.6.11
+  '@727-ventures/typechain-polkadot': 0.6.12
   '@727-ventures/typechain-types': 0.0.23
   '@astar-network/swanky-cli': 2.1.0
   '@types/chai': 4.3.4
@@ -33,7 +33,7 @@ dependencies:
   '@727-ventures/typechain-types': 0.0.23
 
 devDependencies:
-  '@727-ventures/typechain-polkadot': 0.6.11_hrj2sufdvstjot27h3kha2h3l4
+  '@727-ventures/typechain-polkadot': 0.6.12_hrj2sufdvstjot27h3kha2h3l4
   '@astar-network/swanky-cli': 2.1.0
   '@types/chai': 4.3.4
   '@types/chai-as-promised': 7.1.5
@@ -124,6 +124,37 @@ packages:
       - supports-color
       - typescript
       - utf-8-validate
+    dev: false
+
+  /@727-ventures/typechain-polkadot/0.6.12_hrj2sufdvstjot27h3kha2h3l4:
+    resolution: {integrity: sha512-QgGCiNClWYIosvoE1sdMsqQg/N9tK9XvDacTHD2NBSiheLqA1qTRZWOu8+nJq8EZtqfBF7hHfPrwwOeMWVN8Dg==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+    hasBin: true
+    dependencies:
+      '@727-ventures/typechain-polkadot-parser': 0.3.6
+      '@polkadot/api': 9.14.2
+      '@polkadot/api-contract': 9.14.2
+      '@polkadot/keyring': 10.4.2_bfy7tld2q6wbfixybv6w75yda4
+      '@types/fs-extra': 9.0.13
+      '@types/node': 18.14.0
+      '@types/yargs': 17.0.22
+      camelcase: 6.3.0
+      eslint: 8.36.0
+      fs-extra: 9.1.0
+      handlebars: 4.7.7
+      prettier: 2.8.4
+      ts-node: 10.9.1_tncu2ai53lzgmizdedur7lbibe
+      yargs: 17.7.0
+    transitivePeerDependencies:
+      - '@polkadot/util'
+      - '@polkadot/util-crypto'
+      - '@swc/core'
+      - '@swc/wasm'
+      - bufferutil
+      - supports-color
+      - typescript
+      - utf-8-validate
+    dev: true
 
   /@727-ventures/typechain-types/0.0.23:
     resolution: {integrity: sha512-DNHZFFBaqENS/s8vpY5UNVs/Hqoip+56Auc/PP+vaYV708gTOovTukh2jIzIEUpcxs7t0SvOn3UBZWHT/mRNKQ==}
