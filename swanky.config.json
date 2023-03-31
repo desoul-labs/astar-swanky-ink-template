@@ -21,11 +21,7 @@
   "contracts": {
     "psp34": {
       "name": "psp34",
-      "language": "ink",
-      "build": {
-        "timestamp": 1679714056093,
-        "artifactsPath": "artifacts/psp34/1679714056093"
-      }
+      "language": "ink"
     }
   },
   "networks": {
