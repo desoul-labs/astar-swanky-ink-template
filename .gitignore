@@ -234,4 +234,6 @@ tmpArtifacts
 
 artifacts/*
 !artifacts/.gitkeep
+test/**/artifacts
 typedContract
+
